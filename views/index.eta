@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Ubuntu, serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background: thistle;
+            padding: 20px 0;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Best Shop Ever</h1>
+        <%~ await includeFile('body/items') %>
+        <div>My favorite food is: <%= await it.title %></div>
+        <div>It has description: <%= await it.description %></div>
+        <img src="<%= await it.img%>" style="width: 200px; height: 200px;" />
+    </main>
+    <%~ await includeFile('footer/footer') %>
+</body>
+</html>

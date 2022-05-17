@@ -1,0 +1,6 @@
+<style>
+    body {
+        background: gray;
+        color: aliceblue;
+    }
+</style>
